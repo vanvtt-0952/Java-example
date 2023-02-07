@@ -17,5 +17,12 @@ public class Verhicle {
 	public static void main(String[] args) {
 		Verhicle verhicle1 = new Verhicle("Car", "yellow");
 		Verhicle verhicle2 = new Verhicle("Horse", "grown");
+		
+		System.out.println(verhicle1.name);
+
+		System.out.println(verhicle2.name);
+	}
+
+	public static void main1(String[] args) {
 	}
 }
