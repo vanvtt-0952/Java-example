@@ -29,7 +29,8 @@ public class MainVehicleRegistry {
 	}
 
 //	2. Tìm kiếm phương tiện giao thông theo số xe
-	public Vehicle findVehicleByLicenseNumber(String licenseNumber) {
+	public Vehicle findVehicleByLicenseNumber(String licenseNumber) {		
+//		return vehicles.stream().filter(xe -> xe.getLicenseNumber().equals(licenseNumber)).findFirst().orElse(null);
 		for (Vehicle vehicle : vehicles) {
 			if (vehicle.getLicenseNumber().equals(licenseNumber)) {
 				return vehicle;
