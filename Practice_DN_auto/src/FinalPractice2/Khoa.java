@@ -30,7 +30,7 @@ public class Khoa {
 	}
 
 	// sinh viên có điểm đầu vào cao nhất của khoa
-	public List<SinhVien> SinhVienCoDiemDauVaoCaoNhat() {
+	public List<SinhVien> sinhVienCoDiemDauVaoCaoNhat() {
 //		Float maxPoint = Float.MIN_VALUE;
 //		List<SinhVien> listSinhVienCoDiemCaoNhat = new ArrayList<SinhVien>();
 //
@@ -61,13 +61,12 @@ public class Khoa {
 		 return this.listSinhVien.stream().filter(sv -> sv.getDiemDauVao() == max).collect(Collectors.toList());
 		 
 		 // cái này dùng khi chỉ tìm ra sinh viên điểm cao nhất - sinh viên đầu tiên
-//		SinhVien maxByPoint = this.getListSinhVien()
+		 // Sau đó lại lấy điểm tìm ra sinh viên có cùng số điểm trên :v hơi vòng vo nhưng vẫn ra kết quả :v 
+//		SinhVien sinhVienHasMaxByPoint = this.getListSinhVien()
 //			      .stream()
 //			      .max(Comparator.comparing(SinhVien::getDiemDauVao))
 //			      .orElse(null);
-		
-
-		
+//		return this.listSinhVien.stream().filter(sv -> sv.getDiemDauVao() == sinhVienHasMaxByPoint.getDiemDauVao()).collect(Collectors.toList());	
 	}
 
 	public void hienThiThongTin() {

@@ -1,16 +1,26 @@
 package FinalPractice2;
 
+import java.time.LocalDate;
 import java.time.Year;
 import java.util.List;
-import java.util.Locale;
 
 public abstract class SinhVien {
 	private String maSV;
 	private String ten;
-	private Locale ngaySinh;
+	private LocalDate ngaySinh;
 	private Year namNhapHoc;
 	private float diemDauVao;
 	private List<KetQuaHocTap> listKetQuaHocTap;
+
+	public SinhVien(String maSV, String ten, LocalDate ngaySinh, Year namNhapHoc, float diemDauVao,
+			List<KetQuaHocTap> listKetQuaHocTap) {
+		this.maSV = maSV;
+		this.ten = ten;
+		this.ngaySinh = ngaySinh;
+		this.namNhapHoc = namNhapHoc;
+		this.diemDauVao = diemDauVao;
+		this.listKetQuaHocTap = listKetQuaHocTap;
+	}
 
 	// Kiểm tra loại Sinh viên
 	public void showTypeStudent() {
@@ -45,7 +55,8 @@ public abstract class SinhVien {
 		for (KetQuaHocTap ketQuaHocTap : listKetQuaHocTap) {
 			sumPoint += ketQuaHocTap.getDiemTrungBinh();
 		}
-		System.out.println("Diem trung binh la: " + sumPoint / listKetQuaHocTap.size());
+		System.out.println(
+				"Diem trung binh cua sinh vien " + this.getTen() + " la: " + sumPoint / listKetQuaHocTap.size());
 		// ngoài ra còn ... n cách nữa =))
 	}
 
@@ -74,11 +85,11 @@ public abstract class SinhVien {
 		this.ten = ten;
 	}
 
-	public Locale getNgaySinh() {
+	public LocalDate getNgaySinh() {
 		return ngaySinh;
 	}
 
-	public void setNgaySinh(Locale ngaySinh) {
+	public void setNgaySinh(LocalDate ngaySinh) {
 		this.ngaySinh = ngaySinh;
 	}
 
